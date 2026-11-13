@@ -1,0 +1,358 @@
+@charset "utf-8";
+
+body {
+	font-family: "ヒラギノ丸ゴ Pro", "Hiragino Maru Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;	/*フォント種類*/
+	background: #ffffff;	/*背景色*/
+	color: #696a6a;		/*文字色*/
+	line-height: 2;		/*行間*/
+}
+
+
+/*table全般の設定*/
+table {border-collapse:collapse;}
+td{ padding:5px; }
+#tb{
+margin: 10px auto;
+width: 60%;
+
+}
+
+/*画像全般の設定*/
+img {border: none;max-width: 100%;height: auto;vertical-align: middle;}
+
+
+
+/*他*/
+input {font-size: 1rem;}
+
+
+/*リンクテキスト全般の設定
+---------------------------------------------------------------------------*/
+a {
+	color: #696a6a;		/*文字色*/
+	transition: 0.3s;	/*hoverまでにかける時間。0.3秒。*/
+}
+
+/*マウスオン時*/
+a:hover {
+	opacity: 0.8;	/*色を80%だけ出す*/
+}
+
+
+/*sectionとarticleの余白
+---------------------------------------------------------------------------*/
+main > section,
+main > article {
+	padding: 0 5%;	/*上下、左右への余白*/
+}
+
+
+/*コンテナー（サイト全体を囲むブロック）
+---------------------------------------------------------------------------*/
+#container {
+	max-width: 1800px;	/*サイトの最大幅。これ以上広がらない。*/
+	margin: 0 auto;
+}
+
+
+/*header（ロゴが入った最上段のブロック）
+---------------------------------------------------------------------------*/
+/*ヘッダーブロック*/
+header a {color: inherit;}
+header {
+	text-align: center;
+	padding: 5px 1% 0px 1%;		/*ヘッダー内の余白。上、右、下、左への順番。*/
+}
+
+
+	
+
+
+/*ロゴ*/
+#logo {
+	font-size: 10pt;
+	margin: 0;
+	margin-bottom: 5px;	/*下に空けるスペース。お問い合わせボタンがロゴの下にくるので、その間の余白調整です。*/
+	width: 100;	/*ロゴ画像の幅*/
+}
+
+
+
+
+
+/*header右側のボタン
+---------------------------------------------------------------------------*/
+/*ボタンブロック*/
+header .btn {
+	padding: 0; margin: 0;
+	list-style: none;
+}
+
+/*ボタン１個あたり*/
+header .btn li a {
+	display: block;text-decoration: none;
+	background: linear-gradient(#ffc000, #ffa800);/*背景グラデーション*/
+	color: #333;	/*文字色*/
+	border-radius: 3px;	/*角を丸くする指定*/
+	padding: 0.5rem 1.5rem;	/*上下に0.5文字分、左右に1.5文字分、ボタン内に余白を作る*/
+}
+
+
+/*メニューブロック設定
+---------------------------------------------------------------------------*/
+#menubar a {display: block;text-decoration: none;}
+#menubar ul {list-style: none;margin: 0;padding: 0;font-family: "Font Awesome 5 Free";}
+
+
+#menubar.d-b {display: block;}
+#menubar_hdr.d-b {display: flex;}
+#menubar {
+	position: relative;z-index: 1;	/*スライドショーがある場合に下に隠れないようにするため*/
+	font-size: 18px;	/*文字サイズ。端末サイズで文字サイズが変わると不具合が出る場合があるので、ここで統一しています。*/
+	flex: 1;
+}
+
+/*ドロップダウンメニューのリンクタグ*/
+#menubar .ddmenu {
+	cursor: default;	/*リンク要素のカーソルを矢印に変更しておく*/
+}
+/*コンテンツ（mainの１つ外側のブロック）
+---------------------------------------------------------------------------*/
+#contents {
+	flex: 1;
+}
+
+
+/*mainブロック
+---------------------------------------------------------------------------*/
+/*ブロック内のh2見出し*/
+main h2 {
+	text-align: center;		/*文字をセンタリング*/
+	font-size: 2.8rem;		/*文字サイズ。bodyで指定しているfont-sizeの2.8倍。*/
+	font-weight: normal;	/*h要素のデフォルトの太字を標準にする指定*/
+	letter-spacing: 0.1em;	/*文字間隔を少しだけ広くとる*/
+	margin-bottom: 2em;		/*下に空けるスペース。ここのfont-sizeの2文字分。*/
+	background-image: url(image/logo.jpg);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position-y: -30px center;
+	height:300px;
+}
+main h2#ct {
+	text-align: center;		/*文字をセンタリング*/
+	font-size: 2.8rem;		/*文字サイズ。bodyで指定しているfont-sizeの2.8倍。*/
+	font-weight: normal;	/*h要素のデフォルトの太字を標準にする指定*/
+	letter-spacing: 0.1em;	/*文字間隔を少しだけ広くとる*/
+	margin-bottom: 2em;		/*下に空けるスペース。ここのfont-sizeの2文字分。*/
+	background-image: url(image/logo2.jpg);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position-y: -120px;
+	height:200px;
+}
+/*h2の装飾文字部分*/
+main h2 span {
+	display: block;
+	font-size: 0.3em;		/*文字サイズ。親要素（上のh2のfont-size）の30%。*/
+	opacity: 0.5;			/*透明度。50%だけ色を出す指定。*/
+	letter-spacing: 0.5em;	/*文字間隔を広くとる*/
+}
+
+/*h2の文字を左寄せで下線を引くタイプ*/
+main h2.normal {
+	text-align: left;	/*文字を左寄せ*/
+	font-size: 2rem;	/*文字サイズ。bodyで指定しているfont-sizeの2倍。*/
+	border-bottom: 1px solid #d1d3d3;	/*下線の幅、線種、色*/
+	margin-bottom: 0.5em;	/*下に空けるスペース。ここのfont-sizeの2文字分。*/
+}
+
+
+/*フッターメニュー
+---------------------------------------------------------------------------*/
+/*メニューブロック全体*/
+#footermenu {
+	margin: 0;
+	padding: 20px;		/*ブロック内の余白*/
+	text-align: center;	/*テキストを中央に*/
+	font-size: 0.8rem;	/*文字サイズ。bodyのfont-sizeの80%です。*/
+}
+
+/*メニュー１個あたり*/
+#footermenu li {
+	display: inline-block;	/*簡易的に横並びにする*/
+	padding: 0 10px;		/*上下、左右への余白*/
+}
+
+
+/*フッター設定
+---------------------------------------------------------------------------*/
+footer small {font-size: 100%;}
+footer {
+	font-size: 0.7rem;		/*文字サイズ。bodyのfont-sizeの70%です。*/
+	background: var(--primary-color);	/*背景色。css冒頭で指定しているテーマカラーを読み込みます*/
+	color: var(--primary-text-color);	/*文字色。css冒頭で指定しているテーマカラーを読み込みます*/
+	text-align: center;		/*内容をセンタリング*/
+	padding: 20px;			/*ボックス内の余白*/
+}
+
+/*リンクテキスト*/
+footer a {color: inherit;text-decoration: none;}
+
+/*著作部分*/
+footer .pr {display: block;}
+
+
+/*横長タイプのボックス
+---------------------------------------------------------------------------*/
+/*ボックス１個あたり*/
+.list-normal .list {
+	padding: 2rem 0;	/*上下、左右へのボックス内の余白*/
+}
+
+/*ボックス内のfigure画像*/
+.list-normal .list figure {
+	margin-bottom: 1rem;	/*画像の下に空けるスペース*/
+}
+/*ボックス内のh4タグ*/
+.list-normal .list h4 {
+	margin: 0;				/*デフォルトマージンを一旦リセット*/
+	margin-bottom: 0.5em;	/*下に少し余白を作る*/
+	font-size: 1.3rem;		/*文字サイズ。bodyで指定しているfont-sizeの1.3倍。*/
+}
+
+/*ボックス内のpタグ*/
+.list-normal .list p {
+	margin: 0;			/*デフォルトマージンを一旦リセット*/
+	font-size: 0.9rem;	/*文字サイズ。bodyで指定しているfont-sizeの0.9倍。*/
+}
+
+	/*画面幅900px以上の追加指定*/
+	@media screen and (min-width:900px) {
+	
+		.list-normal .list div {
+			flex: 1;
+		}
+	
+		/*ボックス１個あたり*/
+		.list-normal .list {
+			display: flex;	/*flexボックスを使う指定*/
+			align-items: center;			/*垂直揃えの指定。天地中央に配置されるように。*/
+		}
+	
+		/*ボックス内のfigure画像*/
+		.list-normal .list figure {
+			margin-bottom: 0;	/*下に空けるスペースをリセットする*/
+			width: 40%;			/*画像の幅*/
+			margin-right: 2rem;	/*画像の右側に空けるスペース*/
+		}
+	
+		}/*追加指定ここまで*/
+
+
+---------------------------------------------------------------------------*/
+/*２カラムを囲むブロック*/
+.list-half .list {
+	display: flex;			/*flexボックスを使う指定*/
+	flex-direction: column;	/*子要素を縦並びにする*/
+	margin-bottom: 5rem;	/*ボックスの下に5文字分のスペースを空ける*/
+}
+
+/*h4見出し*/
+.list-half .list h4 {
+	margin: 0;			/*デフォルトマージンを一旦リセット*/
+	font-size: 1.5rem;	/*文字サイズ。bodyで指定しているfont-sizeの1.5倍。*/
+}
+
+/*画像ブロック共通*/
+.list-half .image-l img, .list-half .image-r img {
+	border-radius: 10px;	/*角を丸くする指定。*/
+	box-shadow: 5px 5px 5px rgba(0,0,0,0.1);	/*ボックスの影。右へ、下へ、ぼかし幅。0,0,0は黒の事で0.1は色が10%出た状態。*/
+}
+
+	
+/*３列タイプのボックス（grid）
+---------------------------------------------------------------------------*/
+/*ボックス１個あたり*/
+.list-grid .list {
+	position: relative;
+    display: grid;	/*gridを使う指定*/
+    grid-template-rows: auto 1fr auto;	/*list内の上から２番目のブロック(.text)だけ伸ばし、他は自動。*/
+	margin-bottom: 1rem;	/*下に空けるスペース*/
+}
+
+/*ボックス内のh4タグ*/
+.list-grid .list h4 {
+	margin: 0;
+}
+/*ボックス内のh4タグ*/
+.list-grid .list .text {
+	text-align: center;
+}
+/*ボックス内のpタグ*/
+.list-grid .list .text p {
+	margin: 0;
+	font-size: 0.8em;	/*文字サイズを80%に*/
+	line-height: 1.5;	/*行間を少し狭く*/
+}
+
+/*ボックス内のfigure画像*/
+.list-grid .list figure {
+	margin-bottom: 1rem;	/*下に空けるスペース*/
+}
+
+.list-grid .btn form{
+
+	text-align: center;	
+	margin:0 auto;	/*テキストをセンタリング*/
+}
+/*ボタン*/
+.list-grid .btn input{
+	text-decoration: none;
+	text-align: center;		/*テキストをセンタリング*/
+	padding: 5px 5px;		/*ボタン内の余白*/
+	margin-top: 1rem;		/*ボタンの上に空けるスペース*/
+}
+
+		/*画面幅900px以上の追加指定*/
+		@media screen and (min-width:900px) {
+
+			/*listブロック全体を囲むブロック*/
+			.list-grid {
+				display: grid;	/*gridを使う指定*/
+				grid-template-columns: repeat(3, 1fr);	/*３列にする指定。４列にしたければrepeat(4, 1fr)とする。*/
+				gap: 2rem;	/*マージン的な指定。２文字分。*/
+			}
+			
+			/*ボックス１個あたり*/
+			.list-grid .list {
+				margin-bottom: 0;	/*ボックス同士の上下間に空けるスペースをリセット*/
+			}
+		
+			}/*追加指定ここまで*/
+			/*画面幅900px以上の追加指定*/
+
+
+p#menu{
+	text-align: center;
+}
+
+/*その他
+---------------------------------------------------------------------------*/
+.clearfix::after {content: "";display: block;clear: both;}
+.color-check, .color-check a {color: #ff0000 !important;}
+.color-theme, .color-theme a {color: var(--secondary-color) !important;}
+.l {text-align: left !important;}
+.c {text-align: center !important;}
+.r {text-align: right !important;}
+.ws {width: 100%;display: block;}
+.wl {width: 100%;display: block;}
+.mb0 {margin-bottom: 0px !important;}
+.mb30 {margin-bottom: 30px !important;}
+.mb5rem {margin-bottom: 5rem !important;}
+.look {display: inline-block;padding: 0px 10px;background: #eee;border: 1px solid #ccc; border-radius: 3px;margin: 5px 0; word-break: break-all;}
+.small {font-size: 0.75em;}
+.large {font-size: 2em; letter-spacing: 0.1em;}
+.pc {display: none;}
+.dn {display: none !important;}
+.block {display: block !important;}
+

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>ご注文受付</title>
+    <link rel="stylesheet" href="cstyle.css">
+    <style>
+
+        /* フォームのスタイル (変更なし) */
+        .form-container {
+            max-width: 500px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .form-group {
+            margin-bottom: 10px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #555;
+        }
+        .form-group input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        .form-submit {
+            text-align: center;
+        }
+        .form-submit input[type="submit"] {
+            display: inline-block;
+            padding: 10px 30px;
+            font-size: 1rem;
+            color: #fff;
+            background-color: #550000;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .form-submit input[type="submit"]:hover {
+            background-color: #770000;
+        }
+    </style>
+</head>
+<body>
+
+<div id="container">
+    <main>
+        <section>
+            <h2 id="ct">ご注文受付<span>Order Form</span></h2>
+            
+            <div class="form-container">
+                <form action="checkout1.php" method="post">
+                    <div class="form-group">
+                        <label for="name">氏名</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="addr">住所</label>
+                        <input type="text" id="addr" name="addr" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="tel">電話番号</label>
+                        <input type="text" id="tel" name="tel" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="mail">E-Mail</label>
+                        <input type="text" id="mail" name="mail" required>
+                    </div>
+                    <div class="form-submit">
+                        <input type="submit" value="確認">
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p class="inner">&copy; 2024 ISC,iwasaki-gakuen All rights reserved.</p>
+    </footer>
+</div>
+
+</body>
+</html>
