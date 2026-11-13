@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>サンプル</title>
+<style>
+ .new{ background-color:red; }
+</style>
+  <script>
+let cafe = ['ホット','アイス','ラテ','アイスラテ'];
+let price = [300,350,400,450];
+  </script>
+<body>
+<h2>本日のメニュー</h2>
+<script>
+for(let i=0;i<cafe.length;i++){
+ if(i%2 === 1){
+ 	document.write(cafe[i] + '価格' + price[i] + '円 new!!<br>');
+ }else{
+ 	document.write(cafe[i] + '価格' + price[i] + '円<br>');
+ }
+}「」
+</script>
+
+
+</body>
+</html>
